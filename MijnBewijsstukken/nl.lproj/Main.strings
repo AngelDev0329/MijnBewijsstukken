@@ -1,0 +1,84 @@
+
+/* Class = "UIButton"; normalTitle = "B"; ObjectID = "00k-LO-zWB"; */
+"00k-LO-zWB.normalTitle" = "B";
+
+/* Class = "UILabel"; text = "MijnBewijsstukken"; ObjectID = "1Jf-wK-dfI"; */
+"1Jf-wK-dfI.text" = "MijnBewijsstukken";
+
+/* Class = "UILabel"; text = "Leerdoelen"; ObjectID = "1Z8-Gy-V58"; */
+"1Z8-Gy-V58.text" = "Leerdoelen";
+
+/* Class = "UIButton"; normalTitle = "G"; ObjectID = "B8n-EN-8l7"; */
+"B8n-EN-8l7.normalTitle" = "G";
+
+/* Class = "UIViewController"; title = "ViewController"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "ViewController";
+
+/* Class = "UIButton"; normalTitle = "Ik heb een QR-code"; ObjectID = "BuS-GQ-Vv8"; */
+"BuS-GQ-Vv8.normalTitle" = "Ik heb een QR-code";
+
+/* Class = "UIButton"; normalTitle = "INLOGGEN"; ObjectID = "CEJ-FV-rSC"; */
+"CEJ-FV-rSC.normalTitle" = "INLOGGEN";
+
+/* Class = "UIButton"; normalTitle = "I"; ObjectID = "CO9-ko-wAb"; */
+"CO9-ko-wAb.normalTitle" = "I";
+
+/* Class = "UIButton"; normalTitle = "C"; ObjectID = "Hdh-xm-gac"; */
+"Hdh-xm-gac.normalTitle" = "C";
+
+/* Class = "UITextField"; placeholder = "E-mailadres"; ObjectID = "It5-17-kO8"; */
+"It5-17-kO8.placeholder" = "E-mailadres";
+
+/* Class = "UILabel"; text = "B"; ObjectID = "Iw3-yT-zOk"; */
+"Iw3-yT-zOk.text" = "B";
+
+/* Class = "UIButton"; normalTitle = "A"; ObjectID = "JbO-Cc-caV"; */
+"JbO-Cc-caV.normalTitle" = "A";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Kki-m4-8xY"; */
+"Kki-m4-8xY.text" = "Label";
+
+/* Class = "UILabel"; text = "Hoofdleerdoelen"; ObjectID = "LxG-0R-lWc"; */
+"LxG-0R-lWc.text" = "Hoofdleerdoelen";
+
+/* Class = "UIButton"; normalTitle = "H"; ObjectID = "Ulv-VE-xpq"; */
+"Ulv-VE-xpq.normalTitle" = "H";
+
+/* Class = "UILabel"; text = "\tIk kan dezelfde hoeveelheden bij elkaar leggen. Bijvoorbeeld 4 poppen naast 4 jurkjes. Of 6 lijmpotjes bij 6 kwasten."; ObjectID = "UsO-zp-auI"; */
+"UsO-zp-auI.text" = "\tIk kan dezelfde hoeveelheden bij elkaar leggen. Bijvoorbeeld 4 poppen naast 4 jurkjes. Of 6 lijmpotjes bij 6 kwasten.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WX5-hU-ySQ"; */
+"WX5-hU-ySQ.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Wachtwoord"; ObjectID = "YRn-Hc-tWc"; */
+"YRn-Hc-tWc.placeholder" = "Wachtwoord";
+
+/* Class = "UIButton"; normalTitle = "E"; ObjectID = "bBa-Di-lrf"; */
+"bBa-Di-lrf.normalTitle" = "E";
+
+/* Class = "UIButton"; normalTitle = "D"; ObjectID = "hcs-Nw-zfM"; */
+"hcs-Nw-zfM.normalTitle" = "D";
+
+/* Class = "UIViewController"; title = "ClassesOverview"; ObjectID = "itm-SY-Z8h"; */
+"itm-SY-Z8h.title" = "ClassesOverview";
+
+/* Class = "UIButton"; normalTitle = "F"; ObjectID = "kVO-Fx-HP9"; */
+"kVO-Fx-HP9.normalTitle" = "F";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mJl-tu-2iN"; */
+"mJl-tu-2iN.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Er zijn nog geen leerdoelen afgerond"; ObjectID = "pg8-H4-Kfz"; */
+"pg8-H4-Kfz.text" = "Er zijn nog geen leerdoelen afgerond";
+
+/* Class = "UILabel"; text = "B"; ObjectID = "pwH-vC-sRk"; */
+"pwH-vC-sRk.text" = "B";
+
+/* Class = "UILabel"; text = "B"; ObjectID = "u1P-na-Tz1"; */
+"u1P-na-Tz1.text" = "B";
+
+/* Class = "UILabel"; text = "Kies een vak"; ObjectID = "w1h-NI-CcH"; */
+"w1h-NI-CcH.text" = "Kies een vak";
+
+/* Class = "UILabel"; text = "Joepie! Alle leerdoelen zijn afgerond!"; ObjectID = "zOD-Vq-5TT"; */
+"zOD-Vq-5TT.text" = "Joepie! Alle leerdoelen zijn afgerond!";

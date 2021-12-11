@@ -1,0 +1,14 @@
+github "Awalz/SwiftyCam" ~> 2.2.1
+github "tristanhimmelman/AlamofireObjectMapper" ~> 5.0
+github "Alamofire/Alamofire" ~> 4.4
+github "kciter/Floaty" == 3.0.1
+github "Alamofire/AlamofireImage" ~> 3.2
+# github "MatiBot/MBCircularProgressBar"
+
+github "yannickl/QRCodeReader.swift" == 7.5.1
+#github "VeinGuo/VGPlayer"
+#github "JanGorman/Agrume"
+# github "piemonte/Player" ~> 0.8.0
+#github "seedco/Formalist" ~> 0.1.0
+
+github "pusher/push-notifications-swift"

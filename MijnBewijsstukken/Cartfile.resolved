@@ -1,0 +1,8 @@
+github "Alamofire/Alamofire" "4.7.3"
+github "Alamofire/AlamofireImage" "3.4.1"
+github "Awalz/SwiftyCam" "2.6.0"
+github "Hearst-DD/ObjectMapper" "3.4.0"
+github "kciter/Floaty" "3.0.1"
+github "pusher/push-notifications-swift" "1.1.0"
+github "tristanhimmelman/AlamofireObjectMapper" "5.1.0"
+github "yannickl/QRCodeReader.swift" "7.5.1"

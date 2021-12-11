@@ -1,0 +1,71 @@
+PODS:
+  - Agrume (5.8.0):
+    - SwiftyGif
+  - Alamofire (4.9.1)
+  - AlamofireImage (3.6.0):
+    - Alamofire (~> 4.9)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - Bugsnag (5.23.5)
+  - Floaty (4.1.0)
+  - MBCircularProgressBar (0.3.5)
+  - ObjectMapper (3.5.3)
+  - QRCodeReader.swift (10.1.0)
+  - SCLAlertView (0.8.1)
+  - SwiftyCam (4.0.0)
+  - SwiftyGif (5.4.1)
+
+DEPENDENCIES:
+  - Agrume
+  - Alamofire (~> 4.9)
+  - AlamofireImage
+  - AlamofireObjectMapper
+  - Bugsnag
+  - Floaty
+  - MBCircularProgressBar
+  - ObjectMapper
+  - QRCodeReader.swift
+  - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift.git`)
+  - SwiftyCam
+
+SPEC REPOS:
+  trunk:
+    - Agrume
+    - Alamofire
+    - AlamofireImage
+    - AlamofireObjectMapper
+    - Bugsnag
+    - Floaty
+    - MBCircularProgressBar
+    - ObjectMapper
+    - QRCodeReader.swift
+    - SwiftyCam
+    - SwiftyGif
+
+EXTERNAL SOURCES:
+  SCLAlertView:
+    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
+
+CHECKOUT OPTIONS:
+  SCLAlertView:
+    :commit: f08ec93c299a221210e59462c84c79410050e5b7
+    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
+
+SPEC CHECKSUMS:
+  Agrume: 0b1a42b5bfbc3aa9f0801f2857d8df1138cf2951
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  Bugsnag: 5c3f9d33e88c824a0038e1b14629045929182cbb
+  Floaty: 1a4e213f3512cf3045ef9cb0c1ff456226d1f66a
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
+  SCLAlertView: 776813fb1f62248965f37cb7edf4088ee6394460
+  SwiftyCam: 6e57914771d972fbe508e759dc9d0150a44a93fd
+  SwiftyGif: 6895c887f5551618a3c5dd3ecb512419105bacca
+
+PODFILE CHECKSUM: 7e77e62621aa9e3fb3931f93e8989dcb14d9cb4a
+
+COCOAPODS: 1.11.2
