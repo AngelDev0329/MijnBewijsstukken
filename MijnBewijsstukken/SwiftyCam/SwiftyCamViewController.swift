@@ -552,43 +552,43 @@ open class SwiftyCamViewController: UIViewController {
 
 
 	public func switchCamera() {
-		guard isVideoRecording != true else {
-			//TODO: Look into switching camera during video recording
-			print("[SwiftyCam]: Switching between cameras while recording video is not supported")
-			return
-		}
-        
+        guard isVideoRecording != true else {
+            //TODO: Look into switching camera during video recording
+            print("[SwiftyCam]: Switching between cameras while recording video is not supported")
+            return
+        }
+
         guard session.isRunning == true else {
             return
         }
-        
-		switch currentCamera {
-		case .front:
-			currentCamera = .rear
-		case .rear:
-			currentCamera = .front
-		}
 
-		session.stopRunning()
+        switch currentCamera {
+        case .front:
+            currentCamera = .rear
+        case .rear:
+            currentCamera = .front
+        }
 
-		sessionQueue.async { [unowned self] in
+        session.stopRunning()
 
-			// remove and re-add inputs and outputs
+        sessionQueue.async { [unowned self] in
 
-			for input in self.session.inputs {
-				self.session.removeInput(input as! AVCaptureInput)
-			}
+            // remove and re-add inputs and outputs
 
-			self.addInputs()
-			DispatchQueue.main.async {
-				self.cameraDelegate?.swiftyCam(self, didSwitchCameras: self.currentCamera)
-			}
+            for input in self.session.inputs {
+                self.session.removeInput(input )
+            }
 
-			self.session.startRunning()
-		}
+            self.addInputs()
+            DispatchQueue.main.async {
+                self.cameraDelegate?.swiftyCam(self, didSwitchCameras: self.currentCamera)
+            }
 
-		// If flash is enabled, disable it as the torch is needed for front facing camera
-		disableFlash()
+            self.session.startRunning()
+        }
+
+        // If flash is enabled, disable it as the torch is needed for front facing camera
+        disableFlash()
 	}
 
 	// MARK: Private Functions
@@ -653,52 +653,54 @@ open class SwiftyCamViewController: UIViewController {
             videoDevice = SwiftyCamViewController.deviceWithMediaType(AVMediaType.video.rawValue, preferringPosition: .back)
 		}
 
-		if let device = videoDevice {
-			do {
-				try device.lockForConfiguration()
-				if device.isFocusModeSupported(.continuousAutoFocus) {
-					device.focusMode = .continuousAutoFocus
-					if device.isSmoothAutoFocusSupported {
-						device.isSmoothAutoFocusEnabled = true
-					}
-				}
+        if let device = videoDevice {
+            do {
+                try device.lockForConfiguration()
+                if device.isFocusModeSupported(.continuousAutoFocus) {
+                    device.focusMode = .continuousAutoFocus
+                    if device.isSmoothAutoFocusSupported {
+                        device.isSmoothAutoFocusEnabled = true
+                    }
+                }
 
-				if device.isExposureModeSupported(.continuousAutoExposure) {
-					device.exposureMode = .continuousAutoExposure
-				}
+                if device.isExposureModeSupported(.continuousAutoExposure) {
+                    device.exposureMode = .continuousAutoExposure
+                }
 
-				if device.isWhiteBalanceModeSupported(.continuousAutoWhiteBalance) {
-					device.whiteBalanceMode = .continuousAutoWhiteBalance
-				}
+                if device.isWhiteBalanceModeSupported(.continuousAutoWhiteBalance) {
+                    device.whiteBalanceMode = .continuousAutoWhiteBalance
+                }
 
-				if device.isLowLightBoostSupported && lowLightBoost == true {
-					device.automaticallyEnablesLowLightBoostWhenAvailable = true
-				}
+                if device.isLowLightBoostSupported && lowLightBoost == true {
+                    device.automaticallyEnablesLowLightBoostWhenAvailable = true
+                }
 
-				device.unlockForConfiguration()
-			} catch {
-				print("[SwiftyCam]: Error locking configuration")
-			}
-		}
+                device.unlockForConfiguration()
+            } catch {
+                print("[SwiftyCam]: Error locking configuration")
+            }
+        }
 
-		do {
-            let videoDeviceInput = try AVCaptureDeviceInput(device: videoDevice!)
-
-			if session.canAddInput(videoDeviceInput) {
-				session.addInput(videoDeviceInput)
-				self.videoDeviceInput = videoDeviceInput
-			} else {
-                print("[SwiftyCam]: Could not add video device input to the session")
-                print(session.canSetSessionPreset(AVCaptureSession.Preset(rawValue: videoInputPresetFromVideoQuality(quality: videoQuality))))
-                setupResult = .configurationFailed
-				session.commitConfiguration()
-				return
-			}
-		} catch {
-			print("[SwiftyCam]: Could not create video device input: \(error)")
-			setupResult = .configurationFailed
-			return
-		}
+        do {
+            if let videoDevice = videoDevice {
+                let videoDeviceInput = try AVCaptureDeviceInput(device: videoDevice)
+                if session.canAddInput(videoDeviceInput) {
+                    session.addInput(videoDeviceInput)
+                    self.videoDeviceInput = videoDeviceInput
+                } else {
+                    print("[SwiftyCam]: Could not add video device input to the session")
+                    print(session.canSetSessionPreset(AVCaptureSession.Preset(rawValue: videoInputPresetFromVideoQuality(quality: videoQuality))))
+                    setupResult = .configurationFailed
+                    session.commitConfiguration()
+                    return
+                }
+            }
+            
+        } catch {
+            print("[SwiftyCam]: Could not create video device input: \(error)")
+            setupResult = .configurationFailed
+            return
+        }
 	}
 
 	/// Add Audio Inputs

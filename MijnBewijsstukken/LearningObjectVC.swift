@@ -598,7 +598,7 @@ class LearningObjectVC: UIViewController, UICollectionViewDelegate, UICollection
                 imagePicker.mediaTypes = [ (kUTTypeImage as String),(kUTTypeMovie as String)]
                 imagePicker.delegate = self
                 imagePicker.allowsEditing = true
-                self.present(imagePicker, animated: true, completion: nil)
+                self.present(imagePicker, animated: true)
             }
         }).imageSize = CGSize(width: 66, height: 66)
         
@@ -996,7 +996,7 @@ class LearningObjectVC: UIViewController, UICollectionViewDelegate, UICollection
         }
     }
     //    ImagePickerController Delegate
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let mediaType = info[UIImagePickerController.InfoKey.mediaType.rawValue] as! String
         picker.dismiss(animated: false, completion:{

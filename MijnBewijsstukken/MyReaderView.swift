@@ -118,11 +118,11 @@ class MyReaderView: UIView, QRCodeReaderDisplayable {
     @objc func orientationDidChange() {
         setNeedsDisplay()
         overlayView?.setNeedsDisplay()
-        
+
         if let connection = reader?.previewLayer.connection, connection.isVideoOrientationSupported {
             let orientation                    = UIDevice.current.orientation
             let supportedInterfaceOrientations = UIApplication.shared.supportedInterfaceOrientations(for: nil)
-            UIDevice.orientationDidChangeNotification
+            
             connection.videoOrientation = QRCodeReader.videoOrientation(deviceOrientation: orientation, withSupportedOrientations: supportedInterfaceOrientations, fallbackOrientation: connection.videoOrientation)
         }
     }
@@ -157,4 +157,3 @@ class MyReaderView: UIView, QRCodeReaderDisplayable {
         }
     }
 }
-

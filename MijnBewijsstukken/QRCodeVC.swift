@@ -29,10 +29,17 @@ class QRCodeVC: UIViewController, QRCodeReaderViewControllerDelegate {
         let builder = QRCodeReaderViewControllerBuilder {
             $0.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObject.ObjectType.qr], captureDevicePosition: .back)
             
-            $0.cancelButtonTitle = "Annuleren"
-            let readerView = QRCodeReaderContainer(displayable: MyReaderView())
+//            $0.cancelButtonTitle = "Annuleren"
+//            let readerView = QRCodeReaderContainer(displayable: MyReaderView())
+//
+//            $0.readerView = readerView
             
-            $0.readerView = readerView
+            $0.showTorchButton        = true
+            $0.showSwitchCameraButton = true
+            $0.showCancelButton       = true
+            $0.cancelButtonTitle        = "Annuleren"
+            $0.showOverlayView        = true
+            $0.rectOfInterest         = CGRect(x: 0.2, y: 0.2, width: 0.6, height: 0.6)
         }
         
         return QRCodeReaderViewController(builder: builder)

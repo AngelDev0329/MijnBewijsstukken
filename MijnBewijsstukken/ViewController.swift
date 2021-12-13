@@ -14,7 +14,7 @@ import Alamofire
 import Foundation
 import SCLAlertView
 
-class ViewController: UIViewController,QRCodeReaderViewControllerDelegate {
+class ViewController: UIViewController, QRCodeReaderViewControllerDelegate {
 
     //Hide statusbar
     override var prefersStatusBarHidden: Bool {
@@ -32,12 +32,20 @@ class ViewController: UIViewController,QRCodeReaderViewControllerDelegate {
     
     lazy var readerVC: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
-            $0.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObject.ObjectType.qr], captureDevicePosition: .back)
+            $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
             
-            $0.cancelButtonTitle = "Annuleren"
-            let readerView = QRCodeReaderContainer(displayable: MyReaderView())
+//            $0.cancelButtonTitle = "Annuleren"
+//            let readerView = QRCodeReaderContainer(displayable: YourCustomView())
+//            $0.readerView = readerView
+
             
-            $0.readerView = readerView
+//            // Configure the view controller (optional)
+            $0.showTorchButton        = true
+            $0.showSwitchCameraButton = true
+            $0.showCancelButton       = true
+            $0.cancelButtonTitle        = "Annuleren"
+            $0.showOverlayView        = true
+            $0.rectOfInterest         = CGRect(x: 0.2, y: 0.2, width: 0.6, height: 0.6)
         }
         
         return QRCodeReaderViewController(builder: builder)
@@ -185,6 +193,7 @@ class ViewController: UIViewController,QRCodeReaderViewControllerDelegate {
     @IBAction func yellowButtonReleased(_ sender: Any) {
         yellowButton.backgroundColor =  UIColor(red: 248.0/255.0, green: 208.0/255.0, blue: 37/255.0, alpha: 1.0)
     }
+    
     @IBOutlet weak var email_login_form_view: UIView!
     @IBOutlet weak var qr_login_form_view: UIView!
     
@@ -204,10 +213,10 @@ class ViewController: UIViewController,QRCodeReaderViewControllerDelegate {
 
         readerVC.delegate = self
         readerVC.completionBlock = { (result: QRCodeReaderResult?) in
-            
+            print(result)
         }
         readerVC.modalPresentationStyle = .formSheet
-        present(readerVC, animated: true, completion: nil)
+        present(readerVC, animated: true)
     }
     
     // MARK: - QRCodeReaderViewController Delegate Methods

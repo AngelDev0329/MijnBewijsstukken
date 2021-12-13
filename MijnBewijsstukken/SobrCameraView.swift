@@ -105,7 +105,8 @@ open class SobrCameraView: UIView, AVCaptureVideoDataOutputSampleBufferDelegate 
         self.setupGLKView()
         
         let allDevices = AVCaptureDevice.devices(for: AVMediaType.video)
-        let aDevice: AnyObject? = allDevices.first as AnyObject
+//        let aDevice: AnyObject? = allDevices.first as AnyObject
+        let aDevice = allDevices.first
         
         if aDevice == nil {
             return
